@@ -40,4 +40,9 @@ defmodule Cards do
       {:error, _} -> "plz, no yolo overhere"
     end
   end
+
+  def create_hand(hand_size) do
+    {hand, _} = Cards.create_deck |> Cards.shuffle |> Cards.deal(hand_size)
+    hand
+  end
 end
