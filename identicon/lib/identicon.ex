@@ -16,5 +16,8 @@ defmodule Identicon do
     # %Identicon.Image{hex: [red, green, blue | _tail]} = image
     # [red, green, blue]
     [r, g, b] = Enum.slice(image.hex, 0, 3)
+    # also viable
+    # Map.put(image, :color, {r, g, b})
+    %Identicon.Image{image | color: {r, g, b}}
   end
 end
