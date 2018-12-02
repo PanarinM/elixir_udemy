@@ -1,0 +1,10 @@
+<%= form_for @changeset, topic_path(@conn, :update, @topic), fn f -> %>
+  <div class="form-group">
+    <%= text_input f, :title, placeholder: "Title", class: "from-control" %>
+    <%= error_tag f, :title %>
+    <%= text_input f, :body, placeholder: "Body", class: "from-control" %>
+    <%= error_tag f, :body %>
+  </div>
+
+  <%= submit "Save Topic", class: "btn btn-primary" %>
+<% end %>
