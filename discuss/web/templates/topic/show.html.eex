@@ -1,0 +1,6 @@
+<div class="card-panel">
+  <span><h4><%= @topic.title %></h4></span>
+  <div>
+    <%= @topic.body %>
+  </div>
+</div>
