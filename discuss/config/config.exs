@@ -28,7 +28,7 @@ import_config "#{Mix.env}.exs"
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: {Ueberauth.Strategy.Github, []},
+    github: {Ueberauth.Strategy.Github, [default_scope: "user,public_repo"]},
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
